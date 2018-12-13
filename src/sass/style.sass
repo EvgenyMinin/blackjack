@@ -1,0 +1,256 @@
+@import "cards.sass"
+    
+body
+    margin: 0
+    padding: 0
+    background-color: #176817
+    overflow: hidden
+    background: url(../img/table.jpg) no-repeat center top/cover
+
+.botBox
+    display: flex
+    justify-content: center
+    margin-top: 12%
+
+#botScore
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: 2em
+    color: #fff
+    text-shadow: #000 1px 1px 0, #000 -1px -1px 0, #000 -1px 1px 0, #000 1px -1px 0
+
+#playerScore
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: 2em
+    color: #fff
+    text-shadow: #000 1px 1px 0, #000 -1px -1px 0, #000 -1px 1px 0, #000 1px -1px 0
+
+.playerBox
+    display: flex
+    justify-content: center
+
+.button
+    border: none
+    padding: 20px 40px
+    background-color: #ef405d
+    font-size: 2em
+    color: #ffffff
+    border-radius: 10px
+    cursor: pointer
+    &__start
+        z-index: 3
+        margin-top: 80px
+
+.rebuyButton
+    display: flex
+    justify-content: center
+    align-items: center
+
+.startGameButton
+    display: flex
+    justify-content: center
+    align-items: center
+
+.playButtons
+    flex: 2
+    visibility: hidden
+    display: flex
+    justify-content: center
+    align-items: center
+    transform: translateX(50px)
+    &__addCard
+        margin-right: 10px
+
+#chipBox
+    flex: 1
+    display: flex
+    justify-content: flex-end
+    list-style-type: none
+    margin-right: 10px
+    & input
+        display: none
+        &:checked + label
+            transform: scale(1.5)
+
+.chips
+    display: block
+    width: 75px
+    height: 75px
+    margin-right: 15px
+    cursor: pointer
+    &:hover
+        transform: scale(1.5)
+        transition: all .3s
+.chip5
+    background: url(../img/chips.png) -113px 0
+    &:checked
+        transform: scale(2)
+
+.chip25
+    background: url(../img/chips.png) -189px 0
+
+.chip50
+    background: url(../img/chips.png) 300px 75px
+
+.chip100
+    background: url(../img/chips.png) 225px 75px
+
+.chip500
+    background: url(../img/chips.png) 150px 75px
+
+.chip1000
+    background: url(../img/chips.png) 75px 75px
+
+.footer
+    display: flex
+    justify-content: center
+    background-color: rgba(31, 36, 30, .5)
+    border-bottom: 1px solid #d6f277
+    padding-top: 10px
+    position: absolute
+    width: 100%
+    bottom: 5%
+    left: 0
+    z-index: 1
+
+.betBox
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: #281f20
+    width: 100%
+    padding: 10px 0
+    position: absolute
+    left: 0
+    bottom: 0
+    z-index: 0
+    &__bet
+        color: #9494b2
+        font-size: 1.5em
+        font-weight: bold
+        text-align: right
+        &--dollar
+            color: #f6f1da
+
+.cashBox
+    flex: 1
+    &__cash
+        color: #9494b2
+        font-size: 3em
+        font-weight: bold
+        margin-left: 50px
+        margin-top: 5px
+        &--dollar
+            color: #f6f1da
+
+#cash
+    color: #f6f1da
+#bet
+    color: #f6f1da
+
+@media screen and (max-width: 1600px)
+    .button
+        padding: 20px 40px
+        font-size: 1.5em
+        border-radius: 10px
+        &__start
+            z-index: 3
+            margin-top: 20px
+    .botBox
+        margin-top: 8%
+    .cashBox
+        flex: 4
+        &__cash
+            font-size: 2.5em
+            margin-left: 20px
+            margin-top: 10px
+    .playButtons
+        flex: 4
+        transform: translateX(20px)
+    .chips
+        display: block
+        width: 75px
+        height: 75px
+        margin-right: 15px
+        transform: scale(.8)
+        cursor: pointer
+        &:hover
+            transform: scale(1.3)
+            transition: all .3s
+    #chipBox
+        flex: 1
+        & input
+            &:checked + label
+                transform: scale(1.3)
+    .playButtons
+        flex: 4
+    .footer
+        bottom: 45px
+
+
+@media screen and (max-width: 1366px)
+    .cards
+        transform: scale(.7) translateX(-25px)
+        margin-right: -35px
+    .button
+        padding: 15px 30px
+        font-size: 1.2em
+        border-radius: 10px
+        &__start
+            z-index: 3
+            margin-top: 5px
+    #botScore
+        font-size: 1.5em
+        transform: translate(0, -5px)
+    #playerScore
+        font-size: 1.5em
+        transform: translate(0, 25px)
+    .botBox
+        margin-top: 5%
+        transform: translateY(20px)
+    .footer
+        padding-top: 0
+        bottom: 35px
+    .cashBox
+        flex: 3
+        &__cash
+            font-size: 2em
+            margin-left: 70px
+            margin-top: 18px
+    #chipBox
+        flex: 1
+        & input
+            &:checked + label
+                transform: scale(1)
+    .chips
+        display: block
+        width: 75px
+        height: 75px
+        margin-right: -5px
+        &:hover
+            transform: scale(1)
+            transition: all .3s
+    .playButtons
+        flex: 3
+        transform: translateX(-20px)
+    .betBox
+        padding: 5px 0
+
+@media screen and (max-width: 1280px)
+    .playerBox
+        transform: translateY(-30px)
+    #playerScore
+        font-size: 1.2em
+        transform: translateY(-5px)
+    #botScore
+        font-size: 1.2em
+    .button
+        &__start
+            transform: translateY(-35px)
+        &__rebuy
+            transform: translateY(-5px)
+    .playButtons
+        transform: translateX(0)

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+html
+    head
+        meta(charset="UTF-8")
+        title BlackJack
+    body
+        #botCards.botBox
+        #botScore
+        .rebuyButton
+            input(type="button" id="rebuyButton" value="Добавить фишки" class="button button__rebuy")
+        #playerScore
+        #playerCards.playerBox
+        .startGameButton
+            input(type="button" id="startGame" value="Сдать карты" class="button button__start")
+        .footer
+            .cashBox
+                .cashBox__cash CASH: 
+                    span.cashBox__cash--dollar $
+                    span#cash 100
+            #playButtonsBox.playButtons
+                input(type="button" id="addCard" value="Взять карту" class="button playButtons__addCard")
+                input(type="button" id="showCard" value="Хватит" class="button playButtons__showCard")
+            .chipBox#chipBox
+                input(type="radio" id="chip5" name="chips" value=5 checked)
+                label#label5.chips.chip5(for="chip5")
+
+                input(type="radio" id="chip25" name="chips" value=25)
+                label#label25.chips.chip25(for="chip25")
+
+                input(type="radio" id="chip50" name="chips" value=50)
+                label#label50.chips.chip50(for="chip50")
+
+                input(type="radio" id="chip100" name="chips" value=100)
+                label#label100.chips.chip100(for="chip100")
+
+                input(type="radio" id="chip500" name="chips" value=500)
+                label#label500.chips.chip500(for="chip500")
+
+                input(type="radio" id="chip1000" name="chips" value=1000)
+                label#label1000.chips.chip1000(for="chip1000")
+        .betBox
+            .betBox__bet BET: 
+                span.betBox__bet--dollar $
+                span#bet
